@@ -92,7 +92,7 @@ def wygeneruj_sprzedaz(liczba=1, ziarno=None, id_kl_max=1, id_prod_max=1, id_pro
         cena_katalogowa = round(random.uniform(10.0, 1000.0), 2)
         rabat_kwotowy = round(random.uniform(1.0, cena_katalogowa / 2.5), 2)
         cena_sprzedazy = round(cena_katalogowa - rabat_kwotowy, 2)
-        data_sprzedazy = fake.date_time_between(start_date='-2y', end_date='now')
+        data_sprzedazy = fake.date_time_between(start_date='-4y', end_date=datetime.date(2023, 6, 1))
         czas_dostawy = np.random.exponential(scale=3, size=1)
         czas_dostawy = np.clip(czas_dostawy, 1, 7)
         czas_dostawy = int(np.round(czas_dostawy[0]))
